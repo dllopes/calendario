@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cinzaClaro" >
+
+    <TextView
+        android:id="@+id/tituloPrincipal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/cinza"
+        android:text="Alagoas - AL" />
+
+    <TextView
+        android:id="@+id/subTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloPrincipal"
+        android:textColor="@color/cinza"
+        android:paddingLeft="5dp"
+        android:text="Maceió" />
+
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/cinza"
+        android:text="R$ 1.500,00" />
+
+</RelativeLayout>

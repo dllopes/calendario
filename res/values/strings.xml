@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Controle de Gastos</string>
+    
+    <color name="cinza">#333333</color>
+    <color name="cinzaClaro">#CCCCCC</color>
+
+</resources>
