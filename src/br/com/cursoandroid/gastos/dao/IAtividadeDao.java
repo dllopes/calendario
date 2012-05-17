@@ -10,4 +10,6 @@ public interface IAtividadeDao {
 	public Atividade delete(Atividade obj);
 	public Atividade get(Integer id);
 	public ArrayList<Atividade> getAll();
+	public ArrayList<Atividade> getAllDespesas();
+	public ArrayList<Atividade> getAllReceitas();
 }

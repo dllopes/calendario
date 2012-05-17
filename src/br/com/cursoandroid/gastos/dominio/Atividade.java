@@ -12,7 +12,14 @@ public class Atividade {
 	private Date dataInicio;
 	private Float valor;
 	private Atividade parent;
+	private String tipo;
 	
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -43,5 +50,10 @@ public class Atividade {
 	public void setParent(Atividade parent) {
 		this.parent = parent;
 	}	
-
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.nome + "   R$" + this.valor.toString();
+	}
 }

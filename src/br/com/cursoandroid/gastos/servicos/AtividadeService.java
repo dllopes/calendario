@@ -1,5 +1,7 @@
 package br.com.cursoandroid.gastos.servicos;
 
+import java.util.ArrayList;
+
 import br.com.cursoandroid.gastos.dao.DaoFactory;
 import br.com.cursoandroid.gastos.dao.IAtividadeDao;
 import br.com.cursoandroid.gastos.dominio.Atividade;
@@ -26,6 +28,24 @@ public class AtividadeService {
 			return AtividadeService.atividadeDao.update(obj);
 		
 		return AtividadeService.atividadeDao.insert(obj);
+	}
+	
+	public ArrayList<Atividade> getAll(String param){
+		if(param.equals(Atividade.RECEITA))
+			return AtividadeService.atividadeDao.getAllReceitas();
+		
+		if(param.equals(Atividade.DESPESA))
+			return AtividadeService.atividadeDao.getAllDespesas();
+		
+		return AtividadeService.atividadeDao.getAll();
+	}
+	
+	private ArrayList<Atividade> getAllDespesas(){
+		return AtividadeService.atividadeDao.getAllDespesas();
+	}
+	
+	private ArrayList<Atividade> getAllReceitas(){
+		return AtividadeService.atividadeDao.getAllReceitas();
 	}
 
 }

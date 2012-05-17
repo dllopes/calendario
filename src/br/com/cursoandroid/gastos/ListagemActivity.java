@@ -1,5 +1,9 @@
 package br.com.cursoandroid.gastos;
 
+import java.util.ArrayList;
+import java.util.List;
+import br.com.cursoandroid.gastos.dominio.Atividade;
+import br.com.cursoandroid.gastos.servicos.AtividadeService;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -11,14 +15,18 @@ public class ListagemActivity extends Activity{
 		setContentView(R.layout.lista_atividade);
 		super.onCreate(savedInstanceState);
 		
-		ListView lista = (ListView) findViewById(R.id.listagemPrincipal);
-        
-        String[] values = new String[]{
-        	"Teste", "Teste2", "Teste3"	
-        };
-        
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1,values);
-       
-        lista.setAdapter(adapter);
+		Bundle extras = getIntent().getExtras();
+		String itemName = extras.getString("tipo");
+		
+		List<Atividade> atvs = new ArrayList<Atividade>();
+		
+		atvs = AtividadeService.getInstance().getAll(itemName);
+		
+		
+		ListView listagem = (ListView)findViewById(R.id.listagemPrincipal);
+		
+		ArrayAdapter<Atividade> adapter = new ArrayAdapter<Atividade>(this, android.R.layout.simple_list_item_1, atvs);
+		
+		listagem.setAdapter(adapter);
 	}
 }

@@ -35,16 +35,18 @@ public class GastosActivity extends Activity {
 					long itemid) {
 				
 				String value = (String) parent.getAdapter().getItem(position);
-				String sendValue;
+				String sendValue = null;
 				
 				if(value.equals("Receitas"))
 					sendValue = Atividade.RECEITA;
-				else
+				else if(value.equals("Despesas"))
 					sendValue = Atividade.DESPESA;
 				
-				Intent intent = new Intent(self, ListagemActivity.class);
-				intent.putExtra("tipo", sendValue);
-				startActivity(intent);
+				if(sendValue != null){
+					Intent intent = new Intent(self, ListagemActivity.class);
+					intent.putExtra("tipo", sendValue);
+					startActivity(intent);
+				}
 			}
         	
 		});

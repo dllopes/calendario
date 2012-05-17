@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Controle de Gastos</string>
+    <string name="moedaReal">R$ </string>
     
     <color name="cinza">#333333</color>
     <color name="cinzaClaro">#CCCCCC</color>
