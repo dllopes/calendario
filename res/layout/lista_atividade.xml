@@ -7,7 +7,19 @@
     <ListView
         android:id="@+id/listagemPrincipal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="31dp"
+        android:layout_weight="0.89" >
     </ListView>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="teste"
+        android:textColor="@color/branco"
+        android:textSize="25dp"
+        android:gravity="right"
+        android:background="@color/cinza" />
 
 </LinearLayout>

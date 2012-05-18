@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ListagemActivity extends Activity{
 	@Override
@@ -22,11 +23,21 @@ public class ListagemActivity extends Activity{
 		
 		atvs = AtividadeService.getInstance().getAll(itemName);
 		
-		
 		ListView listagem = (ListView)findViewById(R.id.listagemPrincipal);
 		
 		ArrayAdapter<Atividade> adapter = new ArrayAdapter<Atividade>(this, android.R.layout.simple_list_item_1, atvs);
 		
 		listagem.setAdapter(adapter);
+		
+		
+		//total
+		String total = (itemName.equals("R")) 
+					? AtividadeService.getInstance().getTotalReceitas() 
+					: AtividadeService.getInstance().getTotalDespesas() ;
+		
+		TextView totalview = (TextView) findViewById(R.id.total);
+		
+		totalview.setText("Total "+ total);
+		
 	}
 }

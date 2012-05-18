@@ -40,12 +40,45 @@ public class AtividadeService {
 		return AtividadeService.atividadeDao.getAll();
 	}
 	
-	private ArrayList<Atividade> getAllDespesas(){
-		return AtividadeService.atividadeDao.getAllDespesas();
+	public String getTotalReceitas(){
+		ArrayList<Atividade> atividades = this.getAll(Atividade.RECEITA);
+		float result = 0;
+		
+		for(Atividade atv: atividades){
+			result += atv.getValor();
+		}
+		
+		return "R$ " + result;
 	}
 	
-	private ArrayList<Atividade> getAllReceitas(){
-		return AtividadeService.atividadeDao.getAllReceitas();
+	public String getTotalDespesas(){
+		ArrayList<Atividade> atividades = this.getAll(Atividade.DESPESA);
+		float result = 0;
+		
+		for(Atividade atv: atividades){
+			result += atv.getValor();
+		}
+		
+		return "R$ " + result;
+	}
+	
+	public String getTotal(){
+		ArrayList<Atividade> atividadesReceitas = this.getAll(Atividade.RECEITA);
+		float receitas = 0;
+		
+		for(Atividade atv: atividadesReceitas){
+			receitas += atv.getValor();
+		}
+		
+		ArrayList<Atividade> atividadesDespesas = this.getAll(Atividade.DESPESA);
+		float despesas = 0;
+		
+		for(Atividade atv: atividadesDespesas){
+			despesas += atv.getValor();
+		}
+		
+		
+		return "R$ " + (receitas - despesas);
 	}
 
 }

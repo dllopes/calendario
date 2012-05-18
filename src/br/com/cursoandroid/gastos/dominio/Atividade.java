@@ -54,6 +54,6 @@ public class Atividade {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.nome + "   R$" + this.valor.toString();
+		return this.nome + "   R$ " + this.valor.toString();
 	}
 }
