@@ -7,8 +7,22 @@
     <ListView
         android:id="@+id/listagemPrincipal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="0dp"
+        android:layout_weight="0.89" >
 
     </ListView>
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="top"
+        android:layout_weight="0.05"
+        android:background="@color/cinza"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical|right"
+        android:text=""
+        android:textColor="@color/branco"
+        android:textSize="25dp" />
 
 </LinearLayout>
