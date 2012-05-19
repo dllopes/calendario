@@ -2,8 +2,9 @@ package br.com.cursoandroid.gastos.servicos;
 
 import java.util.ArrayList;
 
-import br.com.cursoandroid.gastos.dao.DaoFactory;
-import br.com.cursoandroid.gastos.dao.IAtividadeDao;
+import android.content.Context;
+import br.com.cursoandroid.gastos.database.dao.DaoFactory;
+import br.com.cursoandroid.gastos.database.dao.IAtividadeDao;
 import br.com.cursoandroid.gastos.dominio.Atividade;
 
 public class AtividadeService {
@@ -15,7 +16,8 @@ public class AtividadeService {
 		AtividadeService.singleton = new AtividadeService();
 	}
 	
-	public static AtividadeService getInstance(){
+	public static AtividadeService getInstance(Context context){
+		AtividadeService.atividadeDao.setContext(context);
 		return AtividadeService.singleton;
 	}
 	
@@ -41,44 +43,15 @@ public class AtividadeService {
 	}
 	
 	public String getTotalReceitas(){
-		ArrayList<Atividade> atividades = this.getAll(Atividade.RECEITA);
-		float result = 0;
-		
-		for(Atividade atv: atividades){
-			result += atv.getValor();
-		}
-		
-		return "R$ " + result;
+		return "não implementado";
 	}
 	
 	public String getTotalDespesas(){
-		ArrayList<Atividade> atividades = this.getAll(Atividade.DESPESA);
-		float result = 0;
-		
-		for(Atividade atv: atividades){
-			result += atv.getValor();
-		}
-		
-		return "R$ " + result;
+		return "não implementado";
 	}
 	
 	public String getTotal(){
-		ArrayList<Atividade> atividadesReceitas = this.getAll(Atividade.RECEITA);
-		float receitas = 0;
-		
-		for(Atividade atv: atividadesReceitas){
-			receitas += atv.getValor();
-		}
-		
-		ArrayList<Atividade> atividadesDespesas = this.getAll(Atividade.DESPESA);
-		float despesas = 0;
-		
-		for(Atividade atv: atividadesDespesas){
-			despesas += atv.getValor();
-		}
-		
-		
-		return "R$ " + (receitas - despesas);
+		return "Não implementado";
 	}
 
 }

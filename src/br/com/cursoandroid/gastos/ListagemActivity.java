@@ -16,12 +16,14 @@ public class ListagemActivity extends Activity{
 		setContentView(R.layout.lista_atividade);
 		super.onCreate(savedInstanceState);
 		
+		AtividadeService servico = AtividadeService.getInstance(this);
+		
 		Bundle extras = getIntent().getExtras();
 		String itemName = extras.getString("tipo");
 		
 		List<Atividade> atvs = new ArrayList<Atividade>();
 		
-		atvs = AtividadeService.getInstance().getAll(itemName);
+		atvs = servico.getAll(itemName);
 		
 		ListView listagem = (ListView)findViewById(R.id.listagemPrincipal);
 		
@@ -32,8 +34,8 @@ public class ListagemActivity extends Activity{
 		
 		//total
 		String total = (itemName.equals("R")) 
-					? AtividadeService.getInstance().getTotalReceitas() 
-					: AtividadeService.getInstance().getTotalDespesas() ;
+					? servico.getTotalReceitas() 
+					: servico.getTotalDespesas() ;
 		
 		TextView totalview = (TextView) findViewById(R.id.total);
 		

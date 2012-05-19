@@ -50,11 +50,14 @@ public class GastosActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        //pega uma conexão com o banco de dados
+        
         ListView lista = (ListView) findViewById(R.id.listagemPrincipal);
-        AtividadeService servico = AtividadeService.getInstance(); 
+        AtividadeService servico = AtividadeService.getInstance(this);
+        
         String[] values = new String[]{
-        	"Receitas " +  servico.getTotalReceitas()
-        	, "Despesas " + servico.getTotalDespesas()
+        	"Receitas "
+        	, "Despesas "
         };
         
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1,values);
@@ -64,7 +67,7 @@ public class GastosActivity extends Activity {
         lista.setOnItemClickListener( this.listClickEvent );
         
         //saldo
-        String saldo = "Saldo: " + servico.getTotal();
+        String saldo = "Saldo: ";
         
         //saldo textView
         TextView saldoTextView = (TextView) findViewById(R.id.saldo);

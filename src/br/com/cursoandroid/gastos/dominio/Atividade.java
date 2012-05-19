@@ -1,5 +1,7 @@
 package br.com.cursoandroid.gastos.dominio;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -35,7 +37,11 @@ public class Atividade {
 	public Date getDataInicio() {
 		return dataInicio;
 	}
-	public void setDataInicio(Date dataInicio) {
+	public void setDataInicio(int dia, int mes, int ano) throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+		String datastr = dia + "/" + mes + "/" + ano;
+		Date dataInicio = format.parse(datastr);
+		
 		this.dataInicio = dataInicio;
 	}
 	public Float getValor() {
