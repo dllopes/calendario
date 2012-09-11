@@ -24,3 +24,4 @@ $C['DB_PASS']= '456123';
  * O nome do banco de dados com o qual trabalhar
  */
 $C['DB_NAME']= 'php-jquery_example';
+
