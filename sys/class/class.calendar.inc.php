@@ -88,12 +88,163 @@ class Calendar extends DB_Connect{
     );
 
     /*
-     * Determine em que dia da semana o mês começa
+     * Determina em que dia da semana o mês começa
      */
     $ts = mktime(0, 0, 0, $this->_m, 1, $this->_y);
     $this->_startDay = date('w',$ts);
   }
 
+  /**
+   * Retorna marcação HTML para exibir o calendário e os eventos
+   *
+   * Usando as informações armazenadas nas propriedades de classe, os eventos do mês especificado
+   * são carregados, o calendário é gerado e tudo é retornado como marcação válida.
+   *
+   * @return string a marcação HTML do calendário
+   */
+  public function buildCalendar(){
+    /*
+     * Determina o mês do calendário e cria uma matriz de abreviações de dias da semana para rotular
+     * as colunas do calendário
+     */
+    $cal_month = date('F Y', strtotime($this->_useDate));
+    $weekdays = array('Dom','Seg','Ter','Qua','Quin','Sex','Sab');
+
+    /*
+     * Adiciona um cabeçalho à marcação do calendário
+     */
+    $html = "\n\t<h2>$cal_month</h2>";
+    for($d=0, $labels=NULL; $d<7; ++$d){
+      $labels .= "\n\t\t<li>". $weekdays[$d] . "</li>";
+    }
+    $html .= "\n\t<ul class=\"weekdays\">". $labels . "\n\t</ul>";
+
+    /*
+     * Carrega os dados do evento
+     */
+    $events = $this->_createEventObj();
+
+    /*
+     * Cria a marcação do calendário
+     */
+    $html .= "\n\t<ul>"; //Inicia uma nova lista não ordenada
+    for($i=1,$c=1,$t=date('j'),$m=date('m'),$y=date('Y'); $c<=$this->_daysInMonth; ++$i)
+    {
+      /*
+       * Aplica uma classe de "preenchimento" às caixas que ocorrem antes do primeiro mês
+       */
+      $class = $i <= $this->_startDay ? "fill" : NULL;
+
+      /*
+       * Adiciona uma classe "hoje" se a data atual corresponder à data corrente
+       */
+      //echo $c+1 . "=" . $t . " / " . $m . "=" . $this->_m. " / " . $y . "=" . $this->_y . "<br />";
+      if($c+1==$t && $m==$this->_m && $y==$this->_y){
+        $class = "today";
+      }
+
+      /*
+       * Cria rótulos de item de lista abertura e fechamento
+       */
+      $ls = sprintf("\n\t\t<li class=\"%s\">", $class);
+      $le = "\n\t\t</li>";
+
+      /*
+       * Adiciona o dia do mês para identificar a caixa do calendário
+       */
+      if($this->_startDay<$i && $this->_daysInMonth>=$c){
+        /*
+         * Formate os dados dos eventos events data
+         */
+        $event_info = NULL; //limpa a variável
+        if(isset($events[$c])){
+          foreach($events[$c] as $event){
+            $link = '<a href="view.php?event_id='
+              . $event->id.'">'. $event->title
+              . '</a>';
+            $event_info .= "\n\t\t\t$link";
+          }
+        }
+
+        $date = sprintf("\n\t\t\t<strong>%02d</strong>",$c++);
+      }else{
+        $date = "&nbsp;";
+      }
+
+      /*
+       * Se o dia corrente for um sábado, passa para a próxima linha
+       */
+      $wrap = $i!=0 && $i%7==0 ? "\n\t</ul>\n\t<ul>" : NULL;
+
+      /*
+       * Junta as partes em um item pronto
+       */
+      $html .= $ls . $date . $event_info . $le . $wrap;
+    }
+
+    /*
+     * Adiciona um preenchimento para completar a última semana'
+     */
+    while($i%7!=1){
+      $html .="\n\t\t<li class=\"fill\">&nbsp;</li>";
+      ++$i;
+    }
+
+    /*
+     * Fecha a lista não ordenada final
+     */
+    $html .= "\n\t</ul>\n\n";
+
+    /*
+     * Retorna a marcação para a sáida
+     */
+    return $html;
+  }
+
+  /**
+   * Exibe informações de um determinado evento
+   *
+   * @param int $id o ID do evento
+   * @return string marcação básica para exibir informações de eventos
+   */
+  public function displayEvent($id){
+    /*
+     * Assegura de que um ID foi passado
+     */
+    if(empty($id)){ return null;}
+
+    /*
+     * Assegura de que o ID seja um número inteiro
+     */
+    $id = preg_replace('/[^0-9]/','',$id);
+
+    /*
+     * Carrega os dados dos eventos a partir do BD
+     */
+    $event = $this->_loadEventById($id);
+
+    /*
+     * Gera strings para a data, horário inicial e final
+     */
+    $ts = strtotime($event->start);
+    $date = date('F d, Y', $ts);
+    $start = date('g:ia',$ts);
+    $end = date('g:ia', strtotime($event->end));
+
+    /*
+     * Gera e retorna a marcação
+     */
+    return "<h2>$event->title</h2>"
+          ."\n\t<p class=\"dates\">$date, $start&mdash;$end</p>"
+          ."\n\t<p>$event->description</p>";
+  }
+
+  /**
+   * Carrega informações sobre evento(s) em uma matriz
+   *
+   * @param int $id um ID opcional de eventos para filtrar resultados
+   * @return array uma matriz de eventos do banco de dados
+   */
   private function _loadEventData($id=NULL){
     $sql = "SELECT
               `event_id`, `event_title`, `event_desc`, `event_start`, `event_end`
@@ -175,109 +326,32 @@ class Calendar extends DB_Connect{
   }
 
   /**
-   * Retorna marcação HTML para exibir o calendário e os eventos
+   * Retorna um único objeto event
    *
-   * Usando as informações armazenadas nas propriedades de classe, os eventos do mês especificado
-   * são carregados, o calendário é gerado e tudo é retornado como marcação válida.
-   *
-   * @return string a marcação HTML do calendário
+   * @param int $id um ID de evento
+   * @return object o objeto event
    */
-  public function buildCalendar(){
+  private function _loadEventById($id){
     /*
-     * Determina o mês do calendário e cria uma matriz de abreviações de dias da semana para rotular
-     * as colunas do calendário
+     * Se nenhum ID for passado, retorna NULL
      */
-    $cal_month = date('F Y', strtotime($this->_useDate));
-    $weekdays = array('Dom','Seg','Ter','Qua','Quin','Sex','Sab');
-
-    /*
-     * Adiciona um cabeçalho à marcação do calendário
-     */
-    $html = "\n\t<h2>$cal_month</h2>";
-    for($d=0, $labels=NULL; $d<7; ++$d){
-      $labels .= "\n\t\t<li>". $weekdays[$d] . "</li>";
-    }
-    $html .= "\n\t<ul class=\"weekdays\">". $labels . "\n\t</ul>";
-
-    /*
-     * Carrega os dados do evento
-     */
-    $events = $this->_createEventObj();
-
-    /*
-     * Cria a marcação do calendário
-     */
-    $html .= "\n\t<ul>"; //Inicia uma nova lista não ordenada
-    for($i=1,$c=1,$t=date('j'),$m=date('m'),$y=date('Y'); $c<=$this->_daysInMonth; ++$i)
-    {
-      /*
-       * Aplica uma classe de "preenchimento" às caixas que ocorrem antes do primeiro mês
-       */
-      $class = $i <= $this->_startDay ? "fill" : NULL;
-
-      /*
-       * Adiciona uma classe "hoje" se a data atual corresponder à data corrente
-       */
-      //echo $c+1 . "=" . $t . " / " . $m . "=" . $this->_m. " / " . $y . "=" . $this->_y . "<br />";
-      if($c+1==$t && $m==$this->_m && $y==$this->_y){
-        $class = "today";
-      }
-
-      /*
-       * Cria rótulos de item de lista abertura e fechamento
-       */
-      $ls = sprintf("\n\t\t<li class=\"%s\">", $class);
-      $le = "\n\t\t</li>";
-
-      /*
-       * Adiciona o dia do mês para identificar a caixa do calendário
-       */
-      if($this->_startDay<$i && $this->_daysInMonth>=$c){
-        /*
-         * Formate os dados dos eventos events data
-         */
-        $event_info = NULL; //limpa a variável
-        if(isset($events[$c])){
-          foreach($events[$c] as $event){
-            $link = '<a href="view.php?event_id='
-                            . $event->id.'">'. $event->title
-                            . '</a>';
-            $event_info .= "\n\t\t\t$link";
-          }
-        }
-
-        $date = sprintf("\n\t\t\t<strong>%02d</strong>",$c++);
-      }else{
-        $date = "&nbsp;";
-      }
-
-      /*
-       * Se o dia corrente for um sábado, passa para a próxima linha
-       */
-      $wrap = $i!=0 && $i%7==0 ? "\n\t</ul>\n\t<ul>" : NULL;
-
-      /*
-       * Junta as partes em um item pronto
-       */
-      $html .= $ls . $date . $event_info . $le . $wrap;
+    if(empty($id)){
+      return NULL;
     }
 
     /*
-     * Adiciona um preenchimento para completar a última semana'
+     * Carrega a matriz de informações de eventos
      */
-    while($i%7!=1){
-      $html .="\n\t\t<li class=\"fill\">&nbsp;</li>";
-      ++$i;
+    $event = $this->_loadEventData($id);
+
+    /*
+     * Retorna um objeto evento
+     */
+    if(isset($event[0])){
+      return new Event($event[0]);
+    }else{
+      return NULL;
     }
-
-    /*
-     * Fecha a lista não ordenada final
-     */
-    $html .= "\n\t</ul>\n\n";
-
-    /*
-     * Retorna a marcação para a sáida
-     */
-    return $html;
   }
+
 }

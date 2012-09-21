@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list id="fcbd6fbc-8e9c-4678-a833-5d0a6a9ef14d" name="Default" comment="Arquivos de configuração do cabeçalho e do rodapé" />
     <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="Arquivos de configuração do cabeçalho e do rodapé">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/calendario.iml" afterPath="$PROJECT_DIR$/.idea/calendario.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/common/header.inc.php" afterPath="$PROJECT_DIR$/public/assets/common/header.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/style.css" afterPath="$PROJECT_DIR$/public/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/view.php" afterPath="$PROJECT_DIR$/public/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" afterPath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/config/db-cred.inc.php" afterPath="$PROJECT_DIR$/sys/config/db-cred.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/core/init.inc.php" afterPath="$PROJECT_DIR$/sys/core/init.inc.php" />
@@ -33,10 +37,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="41" selection-start="2472" selection-end="2472" vertical-scroll-proportion="0.5781818">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="33" selection-start="794" selection-end="806" vertical-scroll-proportion="-22.4">
+              <folding>
+                <element signature="e#6#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="0" selection-end="591" vertical-scroll-proportion="-8.32">
+            <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="-7.04">
               <folding>
                 <element signature="e#412#448#0" expanded="true" />
               </folding>
@@ -47,56 +71,7 @@
       <file leaf-file-name="header.inc.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/common/header.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="19" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.96">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="47" selection-start="7334" selection-end="7334" vertical-scroll-proportion="1.1624204">
-              <folding>
-                <marker date="1348229293000" expanded="true" signature="6294:6330" placeholder="..." />
-                <marker date="1348229293000" expanded="true" signature="7143:7615" placeholder="..." />
-                <marker date="1348229293000" expanded="true" signature="7143:7349" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.event.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="78" selection-start="967" selection-end="967" vertical-scroll-proportion="-19.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db-cred.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="-16.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="-8.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="true" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="3" column="55" selection-start="164" selection-end="166" vertical-scroll-proportion="-1.92">
               <folding />
             </state>
           </provider>
@@ -117,15 +92,16 @@
       <list>
         <option value="$PROJECT_DIR$/sys/class/class.db_connect.inc.php" />
         <option value="$PROJECT_DIR$/public/confirmdelete.php" />
+        <option value="$USER_HOME$/xamppfiles/htdocs/calendario/public/index.php" />
+        <option value="$PROJECT_DIR$/sys/core/init.inc.php" />
+        <option value="$PROJECT_DIR$/public/assets/common/footer.inc.php" />
         <option value="$PROJECT_DIR$/sys/class/class.event.inc.php" />
         <option value="$PROJECT_DIR$/sys/config/db-cred.inc.php" />
-        <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/calendario/public/index.php" />
-        <option value="$PROJECT_DIR$/sys/core/init.inc.php" />
-        <option value="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
-        <option value="$PROJECT_DIR$/public/assets/common/footer.inc.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/public/view.php" />
         <option value="$PROJECT_DIR$/public/assets/common/header.inc.php" />
+        <option value="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
       </list>
     </option>
   </component>
@@ -133,29 +109,28 @@
     <option name="servers">
       <server host="http://localhost/~dllopes/calendario/*" name="calendario" use_path_mappings="true">
         <path_mappings>
-          <path_mapping local_path="$PROJECT_DIR$/public" remote_path="$PROJECT_DIR$/../../xamppfiles/htdocs/calendario/public" />
+          <path_mapping local_path="$PROJECT_DIR$/public" remote_path="$USER_HOME$/xamppfiles/htdocs/calendario/public" />
           <path_mapping local_path="$PROJECT_DIR$" remote_path="$PROJECT_DIR$" />
         </path_mappings>
       </server>
       <server host="localhost" name="localhost" use_path_mappings="true">
         <path_mappings>
-          <path_mapping local_path="$PROJECT_DIR$/public" remote_path="$PROJECT_DIR$/../../xamppfiles/htdocs/calendario/public" />
-          <path_mapping local_path="$PROJECT_DIR$/public/index.php" remote_path="$USER_HOME$/Sites/calendario/public/index.php" />
-          <path_mapping local_path="$PROJECT_DIR$/sys" remote_path="$USER_HOME$/Sites/calendario/sys" />
+          <path_mapping local_path="$PROJECT_DIR$/public" remote_path="$USER_HOME$/xamppfiles/htdocs/calendario/public" />
+          <path_mapping local_path="$PROJECT_DIR$/public/index.php" remote_path="$PROJECT_DIR$/public/index.php" />
+          <path_mapping local_path="$PROJECT_DIR$/sys" remote_path="$PROJECT_DIR$/sys" />
         </path_mappings>
       </server>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="phpInterpreter">
     <include_path>
-      <path value="$PROJECT_DIR$/../../xamppfiles/bin" />
+      <path value="$USER_HOME$/xamppfiles/bin" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
-    <option name="y" value="84" />
+    <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -317,7 +292,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,34 +342,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="99" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="111" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="112" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="99" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="111" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Sites/calendario" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="105" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="899" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="899" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="105" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="117" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="112" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
@@ -413,14 +400,7 @@
       <recent name="$PROJECT_DIR$/public/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.footer.inc.php">
-    <configuration default="false" name="class.calendar.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/sys/class/class.calendar.inc.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="PHP Web Application.in-browser">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -443,39 +423,31 @@
     </configuration>
     <configuration default="false" name="init.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/sys/core/init.inc.php">
       <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/public/index.php">
+    <configuration default="false" name="class.calendar.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/sys/class/class.calendar.inc.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <RunnerSettings RunnerId="PhpScriptDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="in-browser" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="CHROME" server_name="calendario" start_url="http://localhost/~dllopes/">
+    <configuration default="false" name="in-browser" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="calendario" start_url="http://localhost/~dllopes/*">
       <RunnerSettings RunnerId="PhpRunner" />
       <RunnerSettings RunnerId="PhpWebAppDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpWebAppDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="footer.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/public/assets/common/footer.inc.php">
-      <method />
-    </configuration>
-    <list size="6">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.db-cred.inc.php" />
       <item index="1" class="java.lang.String" itemvalue="PHP Script.init.inc.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.class.calendar.inc.php" />
       <item index="3" class="java.lang.String" itemvalue="PHP Web Application.in-browser" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.class.calendar.inc.php" />
-      <item index="5" class="java.lang.String" itemvalue="PHP Script.footer.inc.php" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.class.calendar.inc.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
@@ -504,19 +476,6 @@
       <created>1347288028473</created>
       <updated>1348230007668</updated>
     </task>
-    <task id="LOCAL-00001" summary="Feito conexão com banco, estrutura do calendário pronta; preparação dos dias da semana para começão a implementar o HTML do calendário">
-      <created>1347567299516</created>
-      <updated>1347567299516</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Arquivos de configuração do cabeçalho e do rodapé">
-      <created>1348230031163</created>
-      <updated>1348230031163</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Arquivos de configuração do cabeçalho e do rodapé">
-      <created>1348235146753</created>
-      <updated>1348235146753</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -540,26 +499,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="84" width="1280" height="800" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="998" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.6310541" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.35897437" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36807096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2734375" sideWeight="0.62527716" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28200972" sideWeight="0.97377425" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3976436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -600,7 +559,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arquivos de configuração do cabeçalho e do rodapé" />
+    <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -613,12 +572,10 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Feito conexão com banco, estrutura do calendário pronta; preparação dos dias da semana para começão a implementar o HTML do calendário" />
-    <MESSAGE value="Arquivos de configuração do cabeçalho e do rodapé" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -634,67 +591,87 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="53" selection-start="8718" selection-end="8718" vertical-scroll-proportion="0.5648485" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/confirmdelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="182" selection-end="182" vertical-scroll-proportion="0.05324459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/class/class.db_connect.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+        <state line="25" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="34" selection-start="1855" selection-end="1855" vertical-scroll-proportion="-27.24" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="603" column="18" selection-start="17849" selection-end="17849" vertical-scroll-proportion="-1.7619047">
+        <state line="25" column="36" selection-start="388" selection-end="388" vertical-scroll-proportion="-16.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/calendario/public/index.php">
+    <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="166" selection-end="166" vertical-scroll-proportion="-6.4" />
+        <state line="26" column="22" selection-start="389" selection-end="389" vertical-scroll-proportion="0.6380368" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="17" selection-end="17" vertical-scroll-proportion="0.073846154">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/confirmdelete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="182" selection-end="182" vertical-scroll-proportion="-1.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/class/class.db_connect.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="49" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.64">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+        <state line="84" column="44" selection-start="1536" selection-end="1536" vertical-scroll-proportion="1.6231884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="53" selection-start="450" selection-end="450" vertical-scroll-proportion="0.3830303">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="391" selection-end="391" vertical-scroll-proportion="0.40727273">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="0" selection-end="591" vertical-scroll-proportion="-8.32">
+        <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="-7.04">
           <folding>
             <element signature="e#412#448#0" expanded="true" />
           </folding>
@@ -703,40 +680,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/header.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.96">
+        <state line="3" column="55" selection-start="164" selection-end="166" vertical-scroll-proportion="-1.92">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
+    <entry file="file://$PROJECT_DIR$/public/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="-16.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="-8.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="78" selection-start="967" selection-end="967" vertical-scroll-proportion="-19.32">
-          <folding />
+        <state line="45" column="33" selection-start="794" selection-end="806" vertical-scroll-proportion="-22.4">
+          <folding>
+            <element signature="e#6#62#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="47" selection-start="7334" selection-end="7334" vertical-scroll-proportion="1.1624204">
-          <folding>
-            <marker date="1348229293000" expanded="true" signature="6294:6330" placeholder="..." />
-            <marker date="1348229293000" expanded="true" signature="7143:7615" placeholder="..." />
-            <marker date="1348229293000" expanded="true" signature="7143:7349" placeholder="..." />
-          </folding>
+        <state line="93" column="41" selection-start="2472" selection-end="2472" vertical-scroll-proportion="0.5781818">
+          <folding />
         </state>
       </provider>
     </entry>
