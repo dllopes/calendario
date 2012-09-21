@@ -4,6 +4,26 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../xamppfiles/bin" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../xamppfiles/bin" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar:///Applications/XAMPP/xamppfiles/bin/phar.phar" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar:///Applications/XAMPP/xamppfiles/bin/phar.phar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 
