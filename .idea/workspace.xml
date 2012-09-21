@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list id="fcbd6fbc-8e9c-4678-a833-5d0a6a9ef14d" name="Default" comment="Arquivos de configuração do cabeçalho e do rodapé" />
     <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="Arquivos de configuração do cabeçalho e do rodapé">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/calendario.iml" afterPath="$PROJECT_DIR$/.idea/calendario.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/common/header.inc.php" afterPath="$PROJECT_DIR$/public/assets/common/header.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" afterPath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/config/db-cred.inc.php" afterPath="$PROJECT_DIR$/sys/config/db-cred.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/core/init.inc.php" afterPath="$PROJECT_DIR$/sys/core/init.inc.php" />
@@ -48,10 +44,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.inc.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="header.inc.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/common/header.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="0" selection-end="495" vertical-scroll-proportion="0.34461537">
+            <state line="14" column="19" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.96">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="265" column="47" selection-start="7334" selection-end="7334" vertical-scroll-proportion="1.1624204">
+              <folding>
+                <marker date="1348229293000" expanded="true" signature="6294:6330" placeholder="..." />
+                <marker date="1348229293000" expanded="true" signature="7143:7615" placeholder="..." />
+                <marker date="1348229293000" expanded="true" signature="7143:7349" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.event.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="78" selection-start="967" selection-end="967" vertical-scroll-proportion="-19.32">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db-cred.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="-16.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="-8.32">
               <folding />
             </state>
           </provider>
@@ -188,6 +224,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,7 +512,11 @@
       <created>1348230031163</created>
       <updated>1348230031163</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Arquivos de configuração do cabeçalho e do rodapé">
+      <created>1348235146753</created>
+      <updated>1348235146753</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -497,7 +541,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="84" width="1280" height="800" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -505,7 +549,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.6310541" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.35897437" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734375" sideWeight="0.35897437" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36807096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2734375" sideWeight="0.62527716" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -634,37 +678,9 @@
         <state line="10" column="34" selection-start="166" selection-end="166" vertical-scroll-proportion="-6.4" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="78" selection-start="967" selection-end="967" vertical-scroll-proportion="-25.4" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="0.4848485" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="0" selection-start="7360" selection-end="7360" vertical-scroll-proportion="-23.04">
-          <folding>
-            <marker date="1348229293000" expanded="true" signature="6294:6330" placeholder="..." />
-            <marker date="1348229293000" expanded="true" signature="7143:7615" placeholder="..." />
-            <marker date="1348229293000" expanded="true" signature="7143:7349" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="7" selection-start="17" selection-end="17" vertical-scroll-proportion="0.073846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="0.32098764">
           <folding />
         </state>
       </provider>
@@ -687,8 +703,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/header.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="0" selection-end="495" vertical-scroll-proportion="0.34461537">
+        <state line="14" column="19" selection-start="495" selection-end="495" vertical-scroll-proportion="-8.96">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="346" selection-end="346" vertical-scroll-proportion="-16.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="235" selection-end="235" vertical-scroll-proportion="-8.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/class/class.event.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="78" selection-start="967" selection-end="967" vertical-scroll-proportion="-19.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="265" column="47" selection-start="7334" selection-end="7334" vertical-scroll-proportion="1.1624204">
+          <folding>
+            <marker date="1348229293000" expanded="true" signature="6294:6330" placeholder="..." />
+            <marker date="1348229293000" expanded="true" signature="7143:7615" placeholder="..." />
+            <marker date="1348229293000" expanded="true" signature="7143:7349" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,7 +18,7 @@ $C['DB_USER']= 'root';
 /**
  * A senha do banco de dados
  */
-$C['DB_PASS']= '456123';
+$C['DB_PASS']= '';
 
 /**
  * O nome do banco de dados com o qual trabalhar

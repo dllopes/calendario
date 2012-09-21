@@ -6,8 +6,7 @@
  * Time: 13:53
  * To change this template use File | Settings | File Templates.
  */
-class Calendar extends DB_Connect
-{
+class Calendar extends DB_Connect{
   /**
    * A data a partir da qual o calendário deve ser criado
    * Armazenado no formato AAAA-MM-DD HH:MM:SS
@@ -116,7 +115,7 @@ class Calendar extends DB_Connect
       $start_ts = mktime(0,0,0,$this->_m,1,$this->_y);
       $end_ts = mktime(23,59,59,$this->_m+1,0,$this->_y);
       $start_date = date('Y-m-d H:i:s',$start_ts);
-      $end_date = date('Y-m.d H:i:s', $end_ts);
+      $end_date = date('Y-m-d H:i:s', $end_ts);
 
       /*
        * Filtra eventos para apenas os que acontecerem
@@ -141,7 +140,6 @@ class Calendar extends DB_Connect
       $stmt->execute();
       $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
-
       return $results;
     }
     catch(Exception $e){
@@ -149,6 +147,11 @@ class Calendar extends DB_Connect
     }
   }
 
+  /*
+   * Carrega todos os eventos para o mês em uma matriz
+   *
+   * @return informações de eventos da matriz
+   */
   private function _createEventObj(){
     /*
      * Carrega a matriz de eventos
@@ -160,7 +163,7 @@ class Calendar extends DB_Connect
      */
     $events = array();
     foreach($arr as $event){
-      $day = date('j',strtotime($event['envent_start']));
+      $day = date('j',strtotime($event['event_start']));
 
       try{
         $events[$day][] = new Event($event);
@@ -195,6 +198,82 @@ class Calendar extends DB_Connect
       $labels .= "\n\t\t<li>". $weekdays[$d] . "</li>";
     }
     $html .= "\n\t<ul class=\"weekdays\">". $labels . "\n\t</ul>";
+
+    /*
+     * Carrega os dados do evento
+     */
+    $events = $this->_createEventObj();
+
+    /*
+     * Cria a marcação do calendário
+     */
+    $html .= "\n\t<ul>"; //Inicia uma nova lista não ordenada
+    for($i=1,$c=1,$t=date('j'),$m=date('m'),$y=date('Y'); $c<=$this->_daysInMonth; ++$i)
+    {
+      /*
+       * Aplica uma classe de "preenchimento" às caixas que ocorrem antes do primeiro mês
+       */
+      $class = $i <= $this->_startDay ? "fill" : NULL;
+
+      /*
+       * Adiciona uma classe "hoje" se a data atual corresponder à data corrente
+       */
+      //echo $c+1 . "=" . $t . " / " . $m . "=" . $this->_m. " / " . $y . "=" . $this->_y . "<br />";
+      if($c+1==$t && $m==$this->_m && $y==$this->_y){
+        $class = "today";
+      }
+
+      /*
+       * Cria rótulos de item de lista abertura e fechamento
+       */
+      $ls = sprintf("\n\t\t<li class=\"%s\">", $class);
+      $le = "\n\t\t</li>";
+
+      /*
+       * Adiciona o dia do mês para identificar a caixa do calendário
+       */
+      if($this->_startDay<$i && $this->_daysInMonth>=$c){
+        /*
+         * Formate os dados dos eventos events data
+         */
+        $event_info = NULL; //limpa a variável
+        if(isset($events[$c])){
+          foreach($events[$c] as $event){
+            $link = '<a href="view.php?event_id='
+                            . $event->id.'">'. $event->title
+                            . '</a>';
+            $event_info .= "\n\t\t\t$link";
+          }
+        }
+
+        $date = sprintf("\n\t\t\t<strong>%02d</strong>",$c++);
+      }else{
+        $date = "&nbsp;";
+      }
+
+      /*
+       * Se o dia corrente for um sábado, passa para a próxima linha
+       */
+      $wrap = $i!=0 && $i%7==0 ? "\n\t</ul>\n\t<ul>" : NULL;
+
+      /*
+       * Junta as partes em um item pronto
+       */
+      $html .= $ls . $date . $event_info . $le . $wrap;
+    }
+
+    /*
+     * Adiciona um preenchimento para completar a última semana'
+     */
+    while($i%7!=1){
+      $html .="\n\t\t<li class=\"fill\">&nbsp;</li>";
+      ++$i;
+    }
+
+    /*
+     * Fecha a lista não ordenada final
+     */
+    $html .= "\n\t</ul>\n\n";
 
     /*
      * Retorna a marcação para a sáida

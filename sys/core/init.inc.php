@@ -1,8 +1,9 @@
 <?php
 /*
- * Inclua as informações de configuração necessárias
- */
+* Inclua as informações de configuração necessárias
+*/
 include_once '../sys/config/db-cred.inc.php';
+
 /*
  * Defina as constantes para as informações de configuração
  */
