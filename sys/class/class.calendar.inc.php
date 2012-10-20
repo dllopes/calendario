@@ -43,6 +43,18 @@ class Calendar extends DB_Connect{
   private $_startDay;
 
   /**
+   * Array de meses em português (Código pessoal)
+   */
+  private $_meses = array(1 => "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+
+  /**
+   * Array dos dias da semana em portugês (Código pessoal)
+   */
+  private $_semanas = array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+
+
+  /**
    * Cria um objeto de banco de dados e armazena dados relevantes
    *
    * Na instanciação, esta classe recebe um objeto de banco de dados que, se não for nulo, é armazenado na
@@ -55,7 +67,7 @@ class Calendar extends DB_Connect{
    * @param string $useDate a dada a usar para criar o calendário
    * @return void
    */
-  public  function __construct($dbo=null, $useDate=null){
+  public function __construct($dbo=null, $useDate=null){
     /**
      * Chama o construtor da classe mãe para verificar a existência de um objeto de banco de dados
      */
@@ -108,6 +120,10 @@ class Calendar extends DB_Connect{
      * as colunas do calendário
      */
     $cal_month = date('F Y', strtotime($this->_useDate));
+    //Código adicionado (pessoal) para mostrar a data em português
+    $mes = date('n',strtotime($this->_useDate));
+    $ano = date('Y',strtotime($this->_useDate));
+    $cal_month = $this->_meses[$mes] . " " .date('Y', strtotime($this->_useDate));
     $weekdays = array('Dom','Seg','Ter','Qua','Quin','Sex','Sab');
 
     /*
@@ -196,9 +212,14 @@ class Calendar extends DB_Connect{
     $html .= "\n\t</ul>\n\n";
 
     /*
+     * Se não estiver conectado, exibi as opções administrativas
+     */
+    $admin= $this->_adminGeneralOptions();
+
+    /*
      * Retorna a marcação para a sáida
      */
-    return $html;
+    return $html . $admin;
   }
 
   /**
@@ -232,12 +253,219 @@ class Calendar extends DB_Connect{
     $end = date('g:ia', strtotime($event->end));
 
     /*
+     * Carrega opções adimnistrativas se o usuário estiver conectado
+     */
+    $admin = $this->_adminEntryOptions($id);
+
+    /*
      * Gera e retorna a marcação
      */
     return "<h2>$event->title</h2>"
           ."\n\t<p class=\"dates\">$date, $start&mdash;$end</p>"
-          ."\n\t<p>$event->description</p>";
+          ."\n\t<p>$event->description</p>$admin";
   }
+
+  /**
+   * Gera um formulário para editar ou criar eventos
+   *
+   * @retorna string a marcação HTML para o formulário de edição
+   */
+  public function displayForm(){
+    /*
+     * Verifica se um ID foi passado
+     */
+    if(isset($_POST['event_id'])){
+      $id = (int) $_POST['event_id'];
+        //Impõe o tipo inteiro para limpar os dados
+    }else{
+      $id = NULL;
+    }
+
+    /*
+     * Instancia o texto do botão de submissão/cabeçalho
+     */
+    $submit = "Criar Novo Formulário";
+
+    /*
+     * Se for passado um ID, carrega o evento associado
+     */
+    if(!empty($id)){
+       $event = $this->_loadEventById($id);
+
+      /*
+       * Se nenhum objeto for retornado, retorna NULL;
+       */
+      if(!is_object($event)) {return NULL;}
+
+      $submit = "Editar Este Evento";
+    }
+
+    /*
+    * Cria a marcação
+    */
+    return <<<FORM_MARKUP
+
+  <form action="assets/inc/process.inc.php" method="post">
+    <Fieldset>
+      <legend>$submit</legend>
+      <label for="event_title">Título do Evento</label>
+      <input type="text" name="event_title" id="event_title" value="$event->title"/>
+      <label for="event_start">Hora de Início</label>
+      <input type="text" name="event_start" id="event_start" value="$event->start" />
+      <label for="event_end">Hora de Término</label>
+      <input type="text" name="event_end" id="event_end" value="$event->end" />
+      <label for="event_description">Descrição do Evento</label>
+      <textarea name="event_description" id="event_description">$event->description</textarea>
+      <input type="hidden" name="event_id" value="$event->id" />
+      <input type="hidden" name="token" value="$_SESSION[token]" />
+      <input type="hidden" name="action" value="event_edit" />
+      <input type="submit" name="event_submit" value="$submit" />
+      ou <a href="./">Cancelar</a>
+    </Fieldset>
+  </form>
+FORM_MARKUP;
+
+  }
+
+  /**
+   * Valida o formulário e grava/edita o evento
+   *
+   * @Retorna mixed TRUE em caso de sucesso ou uma mensagem de erro em caso de falha
+   */
+  public function processForm(){
+    /*
+     * Sai se a ação não for configurada apropriadamente
+     */
+    if($_POST['action']!='event_edit'){
+      return "O método processForm foi acessado incorretamente";
+    }
+
+    /*
+     * Tira os dados do formulário
+     */
+    $title = htmlentities($_POST['event_title'], ENT_QUOTES);
+    $desc = htmlentities($_POST['event_description'], ENT_QUOTES);
+    $start = htmlentities($_POST['event_start'], ENT_QUOTES);
+    $end = htmlentities($_POST['event_end'], ENT_QUOTES);
+
+    /*
+     * Se nenhum Id de evento for passado, cria um novo evento
+     */
+    if(empty($_POST['event_id'])){
+      $sql = "INSERT INTO `events` (`event_title`,`event_desc`,`event_start`,`event_end`)
+              VALUES
+                (:title, :description, :start, :end)";
+    }
+
+    /*
+     * Atualiza o evento se estiver sendo editado
+     */
+    else{
+      /*
+       * Converte o ID do evento para inteiro por motivo de segurança
+       */
+      $id = (int) $_POST['event_id'];
+      $sql= "UPDATE `events`
+             SET
+              `event_title`=:title,
+              `event_desc`=:description,
+              `event_start`=:start,
+              `event_end`=:end
+              WHERE `event_id`=$id";
+    }
+
+    /*
+     * Executa a consulta de criação ou edição após conectar os dados
+     */
+    try{
+      $stmt = $this->db->prepare($sql);
+      $stmt->bindParam(":title", $title, PDO::PARAM_STR);
+      $stmt->bindParam(":description", $desc, PDO::PARAM_STR);
+      $stmt->bindParam(":start", $start, PDO::PARAM_STR);
+      $stmt->bindParam(":end", $end, PDO::PARAM_STR);
+      $stmt->execute();
+      $stmt->closeCursor();
+      return TRUE;
+    }catch(Exception $e){
+      return $e->getMessage();
+    }
+  }
+
+  /**
+   * Confirma se um evento deve ser excluído
+   *
+   * Ao clicar o botão para excluir um evento, isto gera uma caixa de confirmação. Se o usuário confirmar,
+   * será exluído o evento do banco de dados e envia o usuário de volta para a visualização do calendário. Se o usuário
+   * decidir não excluir o evento, é enviado de volta para a visualização principal do calendário sem excluir nada.
+   */
+  public function confirmDelete($id){
+    /*
+     * Assegura que um ID tenha sido passado
+     */
+    if(empty($id)){return null;}
+
+    /*
+     * Assegura que o id é um número inteiro
+     */
+    $id = preg_replace('/[^0-9]/','',$id);
+
+
+    /*
+     * Se o formulário de confirmação tiver sido submetido e o formulário tiver um
+     * token válido, verifica a submissão do formulário
+     */
+    if(isset($_POST['confirm_delete']) && $_POST['token']==$_SESSION['token']){
+      /*
+       * Se a exclusão for confirmada, remove o evento do banco de dados
+       */
+      if($_POST['confirm_delete']=="Sim, pode deletar"){
+        $sql = "DELETE FROM events WHERE event_id=:id LIMIT 1";
+        try{
+          $stmt = $this->db->prepare($sql);
+          $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+          $stmt->closeCursor();
+          header("Location: ./");
+          return;
+        }catch (Exception $ex){
+          return $ex->getMessage();
+        }
+      }
+
+      /*
+       * Se não confirmado, envia o usuário para a visualização principal
+       */
+      else{
+        header("Location: ./");
+        return;
+      }
+    }
+
+
+    /*
+     * Se o formulário de confirmação não tiver sido submetido, exibe-o
+     */
+    $event = $this->_loadEventById($id);
+    /*
+     * Se nenhum objeto for retornado, retorna a visualização principal
+     */
+    if(!is_object($event)){header("Location: ./");}
+
+    return <<<CONFIRM_DELETE
+
+  <form action="confirmdelete.php" method="post">
+    <h2>
+        Você quer realmente deletar o evento: "$event->title"?
+    </h2>
+    <p>
+        <input type="submit" name="confirm_delete" value="Sim, pode deletar" />
+        <input type="submit" name="confirm_delete" value="Não, estava brincando!"/>
+        <input type="hidden" name="event_id" value="$event->id"/>
+        <input type="hidden" name="token" value="$_SESSION[token]"/>
+    </p>
+  </form>
+CONFIRM_DELETE;
+  }
+
 
   /**
    * Carrega informações sobre evento(s) em uma matriz
@@ -315,7 +543,6 @@ class Calendar extends DB_Connect{
     $events = array();
     foreach($arr as $event){
       $day = date('j',strtotime($event['event_start']));
-
       try{
         $events[$day][] = new Event($event);
       }catch (Exception $e){
@@ -352,6 +579,45 @@ class Calendar extends DB_Connect{
     }else{
       return NULL;
     }
+  }
+
+  /**
+   * Gera marcação paraexibir links administrativos
+   */
+  private function _adminGeneralOptions(){
+    /*
+     * Exibibir controles administrativos
+     */
+    return <<<ADMIN_OPTIONS
+
+    <a href="admin.php" class="admin">+ Add Novo Evento</a>
+ADMIN_OPTIONS;
+  }
+
+  /**
+   * Gera as opções de edição e exclusão para um determinado ID de evento
+   *
+   * @param int $id o ID do evento para o qual gerar as opções
+   * @retorna string a marcação para as opções de edição/exclusão
+   */
+  private function _adminEntryOptions($id){
+    return <<<ADMIN_OPTIONS
+
+  <div class="admin-options">
+    <form action="admin.php" method="post">
+        <p>
+            <input type="submit" name="edit_event" value="Editar Este Evento" />
+            <input type="hidden" name="event_id" value="$id" />
+        </p>
+    </form>
+    <form action="confirmdelete.php" method="post">
+        <p>
+            <input type="submit" name="delete_event" value="Deletar Este Evento" />
+            <input type="hidden" name="event_id" value="$id">
+        </p>
+    </form>
+  </div><!-- end .admin-options -->
+ADMIN_OPTIONS;
   }
 
 }

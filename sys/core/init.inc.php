@@ -1,5 +1,18 @@
 <?php
-mb_internal_encoding("UTF-8");
+
+/*
+ * Habilita sessões
+ */
+
+session_start();
+
+/*
+ * Gera o token anti-CSRF se não existir um
+ */
+if(!isset($_SESSION['token'])){
+  $_SESSION['token'] = sha1(uniqid(mt_rand(), true));
+}
+
 /*
 * Inclua as informações de configuração necessárias
 */
@@ -16,8 +29,8 @@ foreach($C as $name => $val){
  * Crie um objeto PDO
  */
 
-$dsn= "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
-$dbo = new PDO($dsn, DB_USER, DB_PASS);
+$dsn= "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=UTF-8";
+$dbo = new PDO($dsn, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 /*
  * Defina a função de carga automática para classes
