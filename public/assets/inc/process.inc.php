@@ -24,6 +24,11 @@ $actions = array(
     'object' => 'Calendar',
     'method' => 'processForm',
     'header' => 'Location: ../../'
+  ),
+  'user_login' => array(
+  'object' => 'Admin',
+  'method' => 'processLoginForm',
+  'header' => 'Location: ../../'
   )
 );
 

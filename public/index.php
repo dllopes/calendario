@@ -35,6 +35,11 @@ echo $cal->buildCalendar();
 ?>
 
 </div><!-- end #content -->
+<p>
+<?php
+  echo (isset($_SESSION['user']) ? "Login In!" : "Log Out!");
+?>
+</p>
 <?php
 /**
  * Inclui o rodapé

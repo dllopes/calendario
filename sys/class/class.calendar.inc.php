@@ -419,10 +419,13 @@ FORM_MARKUP;
        * Se a exclusão for confirmada, remove o evento do banco de dados
        */
       if($_POST['confirm_delete']=="Sim, pode deletar"){
-        $sql = "DELETE FROM events WHERE event_id=:id LIMIT 1";
+        $sql = "DELETE FROM `events`
+                WHERE `event_id`=:id
+                LIMIT 1";
         try{
           $stmt = $this->db->prepare($sql);
           $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+          $stmt->execute();
           $stmt->closeCursor();
           header("Location: ./");
           return;
