@@ -589,12 +589,30 @@ CONFIRM_DELETE;
    */
   private function _adminGeneralOptions(){
     /*
-     * Exibibir controles administrativos
+     * Se o usuário estiver conectado, exibe os controles administrativos
      */
-    return <<<ADMIN_OPTIONS
+    if(isset($_SESSION['user'])){
+      return <<<ADMIN_OPTIONS
 
-    <a href="admin.php" class="admin">+ Add Novo Evento</a>
+      <a href="admin.php" class="admin">+ Add Novo Evento</a>
+      <form action="assets/inc/process.inc.php" method="post">
+          <div>
+              <input type="submit" value="Log Out" class="admin"/>
+              <input type="hidden" name="token" value="$_SESSION[token]"/>
+              <input type="hidden" name="action" value="user_logout"/>
+          </div>
+      </form>
+
 ADMIN_OPTIONS;
+    }else{
+      return <<<ADMIN_OPTIONS
+
+      <a href="login.php">Log In</a>
+
+ADMIN_OPTIONS;
+
+
+    }
   }
 
   /**
@@ -604,23 +622,31 @@ ADMIN_OPTIONS;
    * @retorna string a marcação para as opções de edição/exclusão
    */
   private function _adminEntryOptions($id){
+    /*
+     * Se o usuário estiver logado
+     */
+    if (isset($_SESSION['user'])){
     return <<<ADMIN_OPTIONS
 
-  <div class="admin-options">
-    <form action="admin.php" method="post">
-        <p>
-            <input type="submit" name="edit_event" value="Editar Este Evento" />
-            <input type="hidden" name="event_id" value="$id" />
-        </p>
-    </form>
-    <form action="confirmdelete.php" method="post">
-        <p>
-            <input type="submit" name="delete_event" value="Deletar Este Evento" />
-            <input type="hidden" name="event_id" value="$id">
-        </p>
-    </form>
-  </div><!-- end .admin-options -->
+      <div class="admin-options">
+        <form action="admin.php" method="post">
+            <p>
+                <input type="submit" name="edit_event" value="Editar Este Evento" />
+                <input type="hidden" name="event_id" value="$id" />
+            </p>
+        </form>
+        <form action="confirmdelete.php" method="post">
+            <p>
+                <input type="submit" name="delete_event" value="Deletar Este Evento" />
+                <input type="hidden" name="event_id" value="$id">
+            </p>
+        </form>
+      </div><!-- end .admin-options -->
+
 ADMIN_OPTIONS;
+    }else{
+      return NULL;
+    }
   }
 
 }

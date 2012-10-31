@@ -29,6 +29,11 @@ $actions = array(
   'object' => 'Admin',
   'method' => 'processLoginForm',
   'header' => 'Location: ../../'
+  ),
+  'user_logout' => array(
+  'object' => 'Admin',
+  'method' => 'processLogout',
+  'header' => 'Location: ../../'
   )
 );
 

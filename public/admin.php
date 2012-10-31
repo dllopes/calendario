@@ -5,6 +5,14 @@
 include_once '../sys/core/init.inc.php';
 
 /*
+ * Se o usuário não estiver conectado, envia-o para o arquivo principal
+ */
+if(!isset($_SESSION['user'])){
+  header("Location: ./");
+  exit;
+}
+
+/*
  * Produz o cabeçalho
  */
 $page_title = "Add/Edit Event";

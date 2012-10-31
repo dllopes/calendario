@@ -98,6 +98,26 @@ class Admin extends DB_Connect{
     // termina o processamento ...
   }
 
+  /**
+   * Desconecta o usuário
+   *
+   * @retorna mixed TRUE em caso de sucesso ou uma mensagem em caso de falha
+   */
+  public function processLogout(){
+    /*
+     * Falha se a ação apropriada não tiver sido submetida
+     */
+    if($_POST['action']!='user_logout'){
+      return "Ação inválida fornecida para o processLogout.";
+    }
+
+    /*
+     * Remove a matriz de usuário da sessão corrente
+     */
+    session_destroy();
+    return TRUE;
+  }
+
   /*
      * Gera um hash com o sal de uma string fornecida
      *

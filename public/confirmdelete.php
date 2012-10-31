@@ -1,9 +1,14 @@
 <?php
 
 /*
- * Assegura que o ID do evento tenha sido passado
+ * Habilita a sessão
  */
-if(isset($_POST['event_id'])){
+session_start();
+
+/*
+ * Assegura que um ID de evento tenha sido passado e que o usuário esteja conectado
+ */
+if(isset($_POST['event_id']) && isset($_SESSION['user'])){
   /*
    * Pega o ID do evento da string da URL
    */
@@ -12,6 +17,7 @@ if(isset($_POST['event_id'])){
 }else{
   /*
    * Envia o usuário para a página principal se nenhum ID tiver sido fornecido
+   * ou o usuário não estiver conectado
    */
   header("Location:./");
   exit;
