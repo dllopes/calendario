@@ -16,7 +16,7 @@ $cal = new Calendar($dbo, "2010-01-01 12:00:00");
  * Configura o título da página e os arquivos CSS
  */
 $page_title = "Events Calendar";
-$css_files = array('style.css','admin.css');
+$css_files = array('style.css','admin.css','ajax.css');
 
 /*
  * Inclui o cabeçalho

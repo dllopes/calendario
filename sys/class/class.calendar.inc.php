@@ -144,6 +144,10 @@ class Calendar extends DB_Connect{
      * Cria a marcação do calendário
      */
     $html .= "\n\t<ul>"; //Inicia uma nova lista não ordenada
+    /*
+     * $i -> posição atual no calendário (36 posições) // $c -> data que se encontra na posição $i
+     * // $t -> data de hoje // $m -> mes de hoje // $y -> ano de hoje
+     */
     for($i=1,$c=1,$t=date('j'),$m=date('m'),$y=date('Y'); $c<=$this->_daysInMonth; ++$i)
     {
       /*
@@ -167,6 +171,7 @@ class Calendar extends DB_Connect{
 
       /*
        * Adiciona o dia do mês para identificar a caixa do calendário
+       * (o dia corrente se encontra depois do primeiro dia do mês? &&  )
        */
       if($this->_startDay<$i && $this->_daysInMonth>=$c){
         /*
@@ -181,7 +186,6 @@ class Calendar extends DB_Connect{
             $event_info .= "\n\t\t\t$link";
           }
         }
-
         $date = sprintf("\n\t\t\t<strong>%02d</strong>",$c++);
       }else{
         $date = "&nbsp;";
