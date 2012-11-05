@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="fcbd6fbc-8e9c-4678-a833-5d0a6a9ef14d" name="Default" comment="Arquivos de configuração do cabeçalho e do rodapé" />
-    <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="Usuário pode fazer logout e configuração de acesso não autorizadas foram implementadas. Terminada a parte de contrução do calendário. Agora vem a parte de integração com Jquery">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/ajax.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/jquery-1.8.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/common/footer.inc.php" afterPath="$PROJECT_DIR$/public/assets/common/footer.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" afterPath="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/init.js" afterPath="$PROJECT_DIR$/public/assets/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" afterPath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
     </list>
@@ -38,19 +34,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="init.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="1243" selection-end="1251" vertical-scroll-proportion="0.0">
+            <state line="72" column="39" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.037647057">
+              <folding>
+                <element signature="e#4194#5384#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/inc/process.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="32" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax.inc.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ajax.inc.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/inc/ajax.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="33" column="7" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="128" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1352213152000" expanded="true" signature="6012:6218" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="27" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/ajax.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="4" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,8 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/sys/class/class.admin.inc.php" />
-        <option value="$PROJECT_DIR$/public/assets/inc/process.inc.php" />
         <option value="$PROJECT_DIR$/public/admin.php" />
         <option value="$PROJECT_DIR$/public/confirmdelete.php" />
         <option value="$PROJECT_DIR$/sys/lib/jquery/jquery-1.8.2.js" />
@@ -80,10 +114,12 @@
         <option value="$PROJECT_DIR$/public/Gordo/coliseu.xhtml" />
         <option value="$PROJECT_DIR$/public/Gordo/coliseu.html" />
         <option value="$PROJECT_DIR$/public/gordo2/COLISEU - PANORAMA - 04 - edit.html" />
-        <option value="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/assets/common/footer.inc.php" />
         <option value="$PROJECT_DIR$/public/assets/css/ajax.css" />
+        <option value="$PROJECT_DIR$/sys/core/init.inc.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
+        <option value="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" />
         <option value="$PROJECT_DIR$/public/assets/js/init.js" />
       </list>
     </option>
@@ -114,10 +150,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1283" />
-    <option name="y" value="84" />
+    <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -205,6 +240,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="class" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,7 +474,15 @@
       <created>1351706659626</created>
       <updated>1351706659626</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Criada função utilizando jquery para exibir uma janela modal (ainda vazia)">
+      <created>1352060303536</created>
+      <updated>1352060303536</updated>
+    </task>
+    <task id="LOCAL-00006" summary="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos">
+      <created>1352138015033</created>
+      <updated>1352138015033</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -445,7 +506,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1283" y="84" width="1280" height="800" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="998" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -453,7 +514,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21717991" sideWeight="0.6701031" order="0" side_tool="false" content_ui="combo" x="336" y="85" width="264" height="647" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22447325" sideWeight="0.99558175" order="0" side_tool="false" content_ui="combo" x="336" y="85" width="264" height="647" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39469808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -506,7 +567,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Usuário pode fazer logout e configuração de acesso não autorizadas foram implementadas. Terminada a parte de contrução do calendário. Agora vem a parte de integração com Jquery" />
+    <option name="LAST_COMMIT_MESSAGE" value="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -523,6 +584,8 @@
     <MESSAGE value="Começo da parte de autenticação (pag - 230)" />
     <MESSAGE value="Usuário ja pode fazer login (pag - 251)" />
     <MESSAGE value="Usuário pode fazer logout e configuração de acesso não autorizadas foram implementadas. Terminada a parte de contrução do calendário. Agora vem a parte de integração com Jquery" />
+    <MESSAGE value="Criada função utilizando jquery para exibir uma janela modal (ainda vazia)" />
+    <MESSAGE value="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -546,50 +609,9 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/flash/p2q_embed_object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="9" selection-start="3862" selection-end="3862" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/quicktime/p2q_embed_object.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8642385">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/quicktime/coliseu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/flash/COLISEU.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="913" selection-end="913" vertical-scroll-proportion="0.3197279">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/inc/process.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="32" selection-start="696" selection-end="696" vertical-scroll-proportion="0.8931419">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="536" column="19" selection-start="15497" selection-end="15497" vertical-scroll-proportion="0.19727892">
-          <folding>
-            <marker date="1351971782000" expanded="true" signature="6013:6219" placeholder="..." />
-          </folding>
-        </state>
+        <state line="37" column="28" selection-start="913" selection-end="913" vertical-scroll-proportion="0.3197279" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/jquery-1.8.2.js">
@@ -599,66 +621,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/header.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="45" selection-start="563" selection-end="563" vertical-scroll-proportion="0.38277513">
-          <folding />
-        </state>
+        <state line="15" column="45" selection-start="563" selection-end="563" vertical-scroll-proportion="0.38277513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/common/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="91" selection-end="91" vertical-scroll-proportion="0.025518341">
-          <folding />
-        </state>
+        <state line="1" column="7" selection-start="91" selection-end="91" vertical-scroll-proportion="0.025518341" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="11" selection-end="13" vertical-scroll-proportion="0.025559105">
-          <folding />
-        </state>
+        <state line="1" column="7" selection-start="11" selection-end="13" vertical-scroll-proportion="0.025559105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="5" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.35889572">
+        <state line="49" column="5" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.35889572" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/config/db-cred.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys/core/init.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="5" selection-start="831" selection-end="831" vertical-scroll-proportion="0.8413223" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/ajax.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="4" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="52" selection-start="354" selection-end="354" vertical-scroll-proportion="0.3875598">
+        <state line="32" column="27" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/ajax.css">
+    <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="220" selection-end="220" vertical-scroll-proportion="0.3190184">
-          <folding />
+        <state line="53" column="128" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1352213152000" expanded="true" signature="6012:6218" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/init.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/inc/process.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1243" selection-end="1251" vertical-scroll-proportion="0.0">
+        <state line="35" column="32" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/inc/ajax.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="33" column="7" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="39" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.037647057">
+          <folding>
+            <element signature="e#4194#5384#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

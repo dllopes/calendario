@@ -26,7 +26,7 @@ foreach($C as $name => $val){
 }
 
 /*
- * Crie um objeto PDO
+ * Cria um objeto PDO
  */
 
 $dsn= "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=UTF-8";

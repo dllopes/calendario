@@ -31,7 +31,6 @@ include_once 'assets/common/header.inc.php';
  * Exibe o HTML do calendário
  */
 echo $cal->buildCalendar();
-
 ?>
 
 </div><!-- end #content -->

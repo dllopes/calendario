@@ -53,7 +53,6 @@ class Calendar extends DB_Connect{
    */
   private $_semanas = array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
 
-
   /**
    * Cria um objeto de banco de dados e armazena dados relevantes
    *
