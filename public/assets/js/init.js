@@ -82,7 +82,6 @@ jQuery(function($){
 
         //Adiciona uma classe "ativa" ao link
         $(this).addClass("active");
-        jj
 
         //Obtém a string de consulta do href do link
         var data = $(this)

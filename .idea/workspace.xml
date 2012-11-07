@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="fcbd6fbc-8e9c-4678-a833-5d0a6a9ef14d" name="Default" comment="Arquivos de configuração do cabeçalho e do rodapé" />
-    <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos">
+    <list default="true" id="9b28f4ab-5cbf-49e6-80a3-dd438ad44e91" name="Rejected commit: Default" comment="Limpando o código">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" afterPath="$PROJECT_DIR$/public/assets/inc/ajax.inc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/init.js" afterPath="$PROJECT_DIR$/public/assets/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" afterPath="$PROJECT_DIR$/sys/class/class.calendar.inc.php" />
     </list>
     <ignored path="calendario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,47 +34,7 @@
       <file leaf-file-name="init.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/assets/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="39" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.037647057">
-              <folding>
-                <element signature="e#4194#5384#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/inc/process.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="32" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/inc/ajax.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="7" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="128" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1352213152000" expanded="true" signature="6012:6218" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="27" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+            <state line="83" column="35" selection-start="3049" selection-end="3049" vertical-scroll-proportion="0.36431226">
               <folding />
             </state>
           </provider>
@@ -92,6 +49,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="27" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.calendar.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="128" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/inc/ajax.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="3" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/inc/process.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="32" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -100,6 +93,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="dllopes" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -150,9 +148,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="998" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -202,7 +201,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,24 +315,25 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="111" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="112" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="108" />
     <property name="options.splitter.main.proportions" value="0.29916668" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="111" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="107" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="117" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="910" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="113" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="876" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="876" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="113" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="112" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="108" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
@@ -351,24 +350,6 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="PublishConfig">
-    <servers>
-      <server id="32d68fc7-e3ff-4478-99d4-abee90e99848">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="b14cb268-daae-448f-bb49-c1bb675fa69f">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -393,14 +374,14 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="false" name="db-cred.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/sys/config/db-cred.inc.php">
@@ -482,7 +463,11 @@
       <created>1352138015033</created>
       <updated>1352138015033</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="teste1231213">
+      <created>1352260797581</created>
+      <updated>1352260797581</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -506,26 +491,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="998" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22447325" sideWeight="0.99558175" order="0" side_tool="false" content_ui="combo" x="336" y="85" width="264" height="647" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22852512" sideWeight="0.6702381" order="0" side_tool="false" content_ui="combo" x="336" y="85" width="264" height="647" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39469808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990878" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -567,7 +552,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Limpando o código" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -586,6 +571,8 @@
     <MESSAGE value="Usuário pode fazer logout e configuração de acesso não autorizadas foram implementadas. Terminada a parte de contrução do calendário. Agora vem a parte de integração com Jquery" />
     <MESSAGE value="Criada função utilizando jquery para exibir uma janela modal (ainda vazia)" />
     <MESSAGE value="manipulação ajax + jquery ao clicar em um evento concluída. Começando a fazer a manipulação ajax + jquery do formulário de Criação de Eventos" />
+    <MESSAGE value="teste1231213" />
+    <MESSAGE value="Limpando o código" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -678,9 +665,7 @@
     <entry file="file://$PROJECT_DIR$/sys/class/class.calendar.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="128" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1352213152000" expanded="true" signature="6012:6218" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,17 +678,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/inc/ajax.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="7" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
+        <state line="33" column="3" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="39" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.037647057">
-          <folding>
-            <element signature="e#4194#5384#0" expanded="false" />
-          </folding>
+        <state line="83" column="35" selection-start="3049" selection-end="3049" vertical-scroll-proportion="0.36431226">
+          <folding />
         </state>
       </provider>
     </entry>
