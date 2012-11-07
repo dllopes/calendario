@@ -82,6 +82,7 @@ jQuery(function($){
 
         //Adiciona uma classe "ativa" ao link
         $(this).addClass("active");
+        jj
 
         //Obtém a string de consulta do href do link
         var data = $(this)
@@ -170,7 +171,7 @@ jQuery(function($){
 
         //Envia os dados para o arquivo de processamento;
         $.ajax({
-            type: "POST,
+            type: "POST",
             url: processFile,
             data: formData,
             success: function(data){
