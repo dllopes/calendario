@@ -170,7 +170,7 @@ jQuery(function($){
 
         //Envia os dados para o arquivo de processamento;
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: processFile,
             data: formData,
             success: function(data){
