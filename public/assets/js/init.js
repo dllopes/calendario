@@ -1,6 +1,6 @@
 //Assegura que o documento esteja pronto antes de executar scripts
 jQuery(function($){
-    //oi?
+
     //Arquivo ao qual as solicitações AJAX devem ser enviadas
     var processFile = "assets/inc/ajax.inc.php",
 
