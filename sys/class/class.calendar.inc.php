@@ -119,16 +119,20 @@ class Calendar extends DB_Connect{
      * as colunas do calendário
      */
     $cal_month = date('F Y', strtotime($this->_useDate));
+    $cal_id = date('Y-m', strtotime($this->_useDate));
+
     //Código adicionado (pessoal) para mostrar a data em português
     $mes = date('n',strtotime($this->_useDate));
     $ano = date('Y',strtotime($this->_useDate));
     $cal_month = $this->_meses[$mes] . " " .date('Y', strtotime($this->_useDate));
+    //fim código pessoal
+
     $weekdays = array('Dom','Seg','Ter','Qua','Quin','Sex','Sab');
 
     /*
      * Adiciona um cabeçalho à marcação do calendário
      */
-    $html = "\n\t<h2>$cal_month</h2>";
+    $html = "\n\t<h2 id=\"month-$cal_id\">$cal_month</h2>";
     for($d=0, $labels=NULL; $d<7; ++$d){
       $labels .= "\n\t\t<li>". $weekdays[$d] . "</li>";
     }
@@ -388,7 +392,11 @@ FORM_MARKUP;
       $stmt->bindParam(":end", $end, PDO::PARAM_STR);
       $stmt->execute();
       $stmt->closeCursor();
-      return TRUE;
+
+      /*
+       * Retorna o ID do evento
+       */
+      return $this->db->lastInsertId();
     }catch(Exception $e){
       return $e->getMessage();
     }

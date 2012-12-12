@@ -65,12 +65,93 @@ jQuery(function($){
                     $(this).remove();
                 });
         },
+
+        //Adiciona um novo evento à marcação após gravar
         "addevent": function(data, formData){
-            //Codigo para adicionar um novo evento vem aqui.
+            //Converte a query string para um objeto
+            var entry = fx.deserialize(formData),
+
+            //Cria um objeto de data para o mês atual
+                cal = new Date(NaN),
+
+            //Cria um objeto de data para o novo evento
+                event = new Date(NaN),
+
+            //Extrai o mês do calendário a partir do ID do H2
+                cdata = $("h2").attr("id").split('-'),
+
+            //Extrai o dia, mês e ano do evento
+                date = entry.event_start.split(' ')[0],
+
+            //Divide a data em partes
+                edata = date.split('-');
+
+            //Configura a data do objeto de data do calendário
+            cal.setFullYear(cdata[1], cdata[2], 1);
+
+            //Configura a data do objeto de data do evento
+            event.setFullYear(edata[0], edata[1], edata[2]);
+
+            //Já que o objeto de data é criado usando
+            //GMT e então ajustado para o fuso horário local,
+            //ajuste a diferença para assegurar uma data apropriada
+            event.setMinutes(event.getTimezoneOffset());
+
+            //Se o ano e o mês corresponderem, inicie o processo
+            //de adicionar o novo evento ao calendário
+            if(cal.getFullYear()==event.getFullYear()
+                && cal.getMonth()==event.getMonth()){
+
+                //Obtém o dia do mês para o evento
+                var day = String(event.getDate());
+
+                //Adiciona um zero à esqueda de dias com um único dígito
+                day = day.length==1 ? "0" + day : day;
+
+                //Adiciona o link para a nova data
+                $("<a>")
+                    .hide()
+                    .attr("href", "view.php?event_id="+data)
+                    .text(entry.event_title)
+                    .insertAfter($("strong:contains("+day+")"))
+                    .delay(1000)
+                    .fadeIn("slow");
+            }
         },
+
         //Desserializa a string de consulta e retorna um objeto de evento
         "deserialize": function(str){
-            //Deserializa os dados aqui
+            //Separa cada par nome-valor
+            var data = str.split("&"),
+
+            //Declara variáveis para usar no laço
+                pairs=[], entry={}, key, val;
+
+            //Percorre cada par nome-valor
+            for(x in data){
+                //Divide cada par em uma matriz
+                pairs = data[x].split("=");
+
+                //O primeiro elemento é o nome
+                key = pairs[0];
+
+                //O segundo elemento é o valor
+                val = pairs[1];
+
+                //Reverte a codificação URL e armazena
+                //cada valor como uma propriedade de objeto
+                entry[key] = fx.urldecode(val);
+            }
+            return entry;
+        },
+
+        //Decodifica um valor da string de consulta
+        "urldecode" : function(str){
+            //Converte sinais de soma em espaços
+            var converted = str.replace(/\+/g,' ');
+
+            //Converte de volta quaisquer entidades codificadas
+            return decodeURIComponent(converted);
         }
     };
 
@@ -177,8 +258,8 @@ jQuery(function($){
                 //Executa fade out na janela modal
                 fx.boxout();
 
-                //Registra uma mensagem no console
-                console.log("Evento Salvo!");
+                //Adiciona o evento ao calendário
+                fx.addevent(data, formData);
             },
             error: function(msg){
                 alert(msg);

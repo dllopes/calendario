@@ -17,7 +17,7 @@
         $this->db = $dbo;
       }else{
         // Constantes são definidas em /sys/config/db-cred.inc.php
-        $dsn = "mysql:host=". DB_HOST . ";dbname=" . DB_NAME;
+        $dsn = "mysql:host=". DB_HOST . ";dbname=" . DB_NAME . ";charset=UTF-8";
         try{
           $this->db = new PDO($dsn, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
           //$this->db->exec("SET CHARACTER SET uft8");
