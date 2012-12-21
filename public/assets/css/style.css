@@ -111,7 +111,7 @@ li a{
     font-style: italic;
 }
 
-li a{
+li a:hover{
     background-color: #BCF;
     z-index: 2;
     -moz-box-shadow: 0 0 6px #789;

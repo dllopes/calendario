@@ -603,12 +603,14 @@ CONFIRM_DELETE;
      * Se o usuário estiver conectado, exibe os controles administrativos
      */
     if(isset($_SESSION['user'])){
+
+      //O VALOR DA CLASSE DO LOGOUT FOI MUDADO DE ADMIN PARA ADMIN2 PARA EVITAR QUE O JAVASCRIPT O CAPTURE
       return <<<ADMIN_OPTIONS
 
       <a href="admin.php" class="admin">+ Add Novo Evento</a>
       <form action="assets/inc/process.inc.php" method="post">
           <div>
-              <input type="submit" value="Log Out" class="admin"/>
+              <input type="submit" value="Log Out" class="admin2"/>
               <input type="hidden" name="token" value="$_SESSION[token]"/>
               <input type="hidden" name="action" value="user_logout"/>
           </div>

@@ -119,6 +119,15 @@ jQuery(function($){
             }
         },
 
+        //Remove um evento da marcação após a exclusão
+        "removeevent" : function(){
+            //Remove qualquer evento com classe "active"
+            $(".active")
+                .fadeOut("slow",function(){
+                    $(this).remove();
+                })
+        },
+
         //Desserializa a string de consulta e retorna um objeto de evento
         "deserialize": function(str){
             //Separa cada par nome-valor
@@ -200,25 +209,35 @@ jQuery(function($){
     });
 
     //Exibe o formulário de edição como uma janela modal
-    $(".admin").live("click", function(event){
+    $(".admin-options form, .admin").live("click", function(event){
 
         //Evita que o formulário seja submetido
         event.preventDefault();
-
         //Carrega a ação para o arquivo de processamento
-        var action = "edit_event";
+        var action = $(event.target).attr("name") || "edit_event";
+
+        //Grava o valor de entrada do event_id
+        id=$(event.target)
+            .siblings("input[name=event_id]")
+            .val();
+
+        //Cria um parâmetro adicional para o ID se configurado
+        id=(id!=undefined) ? "&event_id="+id : "";
 
         //Carrega o formulário de edição e exibi
         $.ajax({
             type: "POST",
             url: processFile,
-            data: "action="+action,
+            data: "action="+action+id,
             success: function(data){
                 //Esconde o formulário
                 var form = $(data).hide();
 
                 //Assegura que a janela modal exista
-                modal = fx.initModal();
+                modal = fx.initModal()
+                    .children(":not(.modal-close-btn)")
+                    .remove()
+                    .end();
 
                 //Chama a função boxin para criar a superposição modal e fade in
                 fx.boxin(null, modal);
@@ -247,7 +266,26 @@ jQuery(function($){
         event.preventDefault();
 
         //Serializa os dados do formulário para uso com $.ajax()
-        var formData = $(this).parents("form").serialize();
+        var formData = $(this).parents("form").serialize(),
+
+        //Armazena o valor do botão de submissão
+            submitVal = $(this).val(),
+
+        //Determina se o evento deve ser removido
+            remove = false;
+
+        //Se for o formulário de exclusão, insere uma ação
+        if( $(this).attr("name")=="confirm_delete"){
+            //Adiciona informações necessárias à string de consulta
+            formData += "&action=confirm_delete"
+                + "&confirm_delete="+submitVal;
+
+            //Se o evento estiver realmente sendo excluído, configura
+            //um flag para removê-lo da marcação
+            if(submitVal=="Sim, pode deletar"){
+                remove=true;
+            }
+        }
 
         //Envia os dados para o arquivo de processamento;
         $.ajax({
@@ -255,11 +293,18 @@ jQuery(function($){
             url: processFile,
             data: formData,
             success: function(data){
+                //Se este for um evento excluído, remove-o da marcação
+                if(remove===true){
+                    fx.removeevent();
+                }
+
                 //Executa fade out na janela modal
                 fx.boxout();
 
-                //Adiciona o evento ao calendário
-                fx.addevent(data, formData);
+                //Se este for um evento novo, adciona-o ao calendário
+                if( $("[name=event_id]").val().length==0 && remove===false){
+                    fx.addevent(data, formData);
+                }
             },
             error: function(msg){
                 alert(msg);
